@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+header{
+    width: 100%;
+    padding: 25px 0.5% 0.5%;
+    float: left;
+    position: fixed;
+    background-color: #f6f6f6;
+}
+
+header #logo{
+    color: #333333;
+    cursor: pointer;
+}
+
+header #logo span{
+    font-size: 2em;
+    margin-left: 40px;
+    line-height: 45px;
+    font-family: 'Sono', serif;
+
+}
+
+@media (min-width: 701px){
+    #logo
+    {
+        float: left;
+        width: 30%;
+        font-size: 1.5em;
+
+    }
+
+    #about{
+     float: right;
+     width: 67%;
+
+    }
+}
+
+@media (max-width: 700px){
+    #logo
+    {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    #about{
+        float:right;
+        width: 100%;
+    }
+}
+
+#about{
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-family: 'Sono', serif;
+}
+
+#about > a{color: #4a4a4a}
+#about >a:hover{color:#006b1b;
+text-decoration: underline;
+}
+#about >a:not(:last-child){
+    margin-right: 7%;
+}
+
+.fixed{
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo{
+    color: #343434;
+}
+
+.fixed #about a {color: #343434}
+.fixed #about a:hover {color: #7c7c7c}
+
+
+
+@media (min-width: 1001px)
+{
+    #top{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 651px){
+    #top{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 650px)
+{
+    #top{
+        font-size: 1.5em;
+        padding-top: 20%;
+    }
+}
+#top {
+    width: 100%;
+    height: 30%;
+    background-color: #fafafa;
+    background-size: cover;
+    text-align: center;
+    color: #333333;
+    font-size: 1.6em;
+     font-family: 'Sono', serif;
+
+}
+
+#top h1{
+    padding-top: 8%;
+     font-family: 'Sono', serif;
+}
+
+#top h3{
+    color: #333333;
+     font-family: 'Sono', serif;
+}
+#container {
+    width: 100%;
+    height: 58%;
+    background-color: #fafafa;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: #333333;
+    font-size: 1.6em;
+    font-family: 'Sono', serif;
+    justify-content: center;
+    border-color: #fafafa;
+
+}
+
+    /* Стили для карточек */
+#container .card {
+        float: left;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: #fafafa;
+    background-attachment: fixed;
+    text-align: center;
+    color: #333333;
+    margin-left: 4%;
+    margin-right: 5%;
+         padding-top: 30px;
+      width: 300px;
+        height: 60%;
+      box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+        border-radius: 1em;
+    }
+
+    /* Оформление ссылок в карточках */
+#container .card a {
+      text-decoration: none;
+    }
+
+    /* Эффект при наведении на карточку */
+#container .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* Стили для изображения в карточках */
+#container .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Стили для содержимого карточек */
+#container .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Стили для заголовка карточек */
+#container .card-title {
+      font-size: 24px;
+      color: #007D47;
+    }
+
+    /* Стили для описания в карточках */
+#container .card-description {
+      font-size: 16px;
+      color: #333333;
+    }
+
+    /* Стили для кнопок в карточках */
+#container .card-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 1em;
+      background-color: #007D47;
+      color: #FFFFFF;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+        width:100%;
+    }
+
+    /* Эффект при наведении на кнопку */
+#container .card-button:hover {
+      background-color: #005E2D;
+    }
+
+.cont_class h3{
+      font-family: 'Sono', serif;
+    text-align: center;
+    font-size: 40px;
+    background-color: #fafafa;
+    margin-bottom: 3%;
+}
+
+.information {
+        padding-left: 5%;
+    padding-right: 5%;
+    font-family: 'Sono', serif;
+margin-left: 0;
+list-style: none;
+counter-reset: ul;
+}
+.information ul {
+    font-family: 'Sono', serif;
+position: relative;
+margin-bottom: 1.5em;
+border: 3px solid #CADFCF;
+padding: 0.6em;
+border-radius: 4px;
+background: #FaFaFa;
+    font-size: 25px;
+color: #231F20;
+}
+.information ul:before {
+    font-family: 'Sono', serif;
+position: absolute;
+top: -0.7em;
+padding-left: 0.4em;
+padding-right: 0.4em;
+font-size: 25px;
+font-weight: bold;
+color: #DCC24B;
+background: #FaFaFa;
+border-radius: 50%;
+counter-increment: ul;
+content: counter(ul);
+}
+
+.information p{
+    font-size: 20px;
+    font-family: 'Sono', serif;
+}
+
+.information li{
+    font-family: 'Sono', serif;
+    position: relative;
+    margin-bottom: 0.6em;
+    background: #FaFaFa;
+    font-size: 20px;
+    color: #231F20;
+}
+
+#infoContainer{
+    width: auto;
+    float: left;
+    background-color: #fafafa;
+    color: #484848;
+    display: block;
+}
+
+    /* Стили для футера */
+#footer {
+      background-color: #F4F4F4;
+      text-align: center;
+      font-size: 16px;
+      color: #333333;
+         width: 100%;
+    padding: 25px 0.5% 0.5%;
+    }

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+header{
+    width: 100%;
+    padding: 25px 0.5% 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo{
+    color: #333333;
+    cursor: pointer;
+}
+
+header #logo span{
+    font-size: 2em;
+    margin-left: 40px;
+    line-height: 45px;
+    font-family: 'Sono', serif;
+
+}
+
+@media (min-width: 701px){
+    #logo
+    {
+        float: left;
+        width: 30%;
+        font-size: 1.5em;
+    }
+
+    #about{
+     float: right;
+     width: 67%;
+    }
+}
+
+@media (max-width: 700px){
+    #logo
+    {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    #about{
+        float:right;
+        width: 100%
+    }
+}
+
+#about{
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-family: 'Sono', serif;
+}
+
+#about > a{color: #4a4a4a}
+#about >a:hover{color:#006b1b;
+text-decoration: underline;
+}
+#about >a:not(:last-child){
+    margin-right: 7%;
+}
+
+.fixed{
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo{
+    color: #343434;
+}
+
+.fixed #about a {color: #343434}
+.fixed #about a:hover {color: #7c7c7c}
+
+@media (min-width: 1001px)
+{
+    #top{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 651px){
+    #top{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 650px)
+{
+    #top{
+        font-size: 1.5em;
+        padding-top: 50%;
+    }
+}
+#top {
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+    background-image: url('img/cat.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+    color: #333333;
+    font-size: 3em;
+}
+
+#top ul{
+    margin-top:15%;
+    float:left;
+    width: 40%;
+    border: 1px solid silver;
+    list-style: none;
+}
+
+#top li {
+margin: 10px 0;
+position: relative;
+}
+
+#top a {
+width: 99%;
+color: #808285;
+text-decoration: none;
+border-left: 6px solid #274770;
+display: block;
+height: 44px;
+line-height: 44px;
+font-size: 20px;
+position: relative;
+transition: 0.3s linear;
+}
+#top a:before {
+content: "";
+width: 6px;
+height: 70%;
+background: #67bb79;
+position: absolute;
+top: 15%;
+left: -12px;
+}
+#top li:before {
+content: "";
+width: 6px;
+height: 40%;
+background: #EFDD89;
+position: absolute;
+top: 30%;
+left: -12px;
+}
+#top a:hover {background: #D4D8D9;}
+
+#main{
+    padding: 100px 20%;
+    width: 60%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid silver;
+    color: #484848;
+}
+
+@media(min-width: 1401px){
+    #main{
+        padding: 100px 20%;
+        width: 60%;
+    }
+}
+@media(max-width: 1400px){
+    #main{
+        padding: 100px 10%;
+        width: 80%;
+    }
+}
+
+@media(max-width: 700px){
+    #main div{
+        width: 98% !important;
+    }
+
+}
+
+#main div{
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+}
+
+#main h2{font-size: 3em}
+#main span{color: #8a8888; font-size: 1.6em; line-height: 1.6}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Sono', serif;
+    font-weight: lighter;
+}
+.answers{
+    padding-left: 5%;
+    width: 95%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid silver;
+    color: #484848;
+    font-family: 'Sono', serif;
+    font-weight: lighter;
+}
+    /* Стили для футера */
+#footer {
+    background-color: #F4F4F4;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    width: 100%;
+    padding: 25px 0.5% 0.5%;
+    }

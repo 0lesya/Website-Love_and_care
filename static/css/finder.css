@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+header{
+    width: 100%;
+    padding: 25px 0.5% 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo{
+    color: #333333;
+    cursor: pointer;
+}
+
+header #logo span{
+    font-size: 2em;
+    margin-left: 40px;
+    line-height: 45px;
+    font-family: 'Sono', serif;
+
+}
+
+@media (min-width: 701px){
+    #logo
+    {
+        float: left;
+        width: 30%;
+        font-size: 1.5em;
+
+    }
+
+    #about{
+     float: right;
+     width: 67%;
+
+    }
+}
+
+@media (max-width: 700px){
+    #logo
+    {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    #about{
+        float:right;
+        width: 100%;
+    }
+}
+
+#about{
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-family: 'Sono', serif;
+}
+
+#about > a{color: #4a4a4a}
+#about >a:hover{color:#006b1b;
+text-decoration: underline;
+}
+#about >a:not(:last-child){
+    margin-right: 7%;
+}
+
+.fixed{
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo{
+    color: #343434;
+}
+
+.fixed #about a {color: #343434}
+.fixed #about a:hover {color: #7c7c7c}
+
+
+@media (min-width: 1001px)
+{
+    #top{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 651px){
+    #top{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 650px)
+{
+    #top{
+        font-size: 1.5em;
+        padding-top: 20%;
+    }
+}
+#top {
+    width: 100%;
+    height: 50%;
+    background-color: #fafafa;
+    background-size: cover;
+    text-align: center;
+    color: #333333;
+    font-size: 1.6em;
+     font-family: 'Sono', serif;
+}
+
+#top h1{
+    padding-top: 15%;
+     font-family: 'Sono', serif;
+}
+
+#top h3{
+    color: #333333;
+     font-family: 'Sono', serif;
+}
+
+
+* {box-sizing: border-box;}
+form {
+  position: relative;
+  width: 25%;
+  margin: 0 auto;
+    padding: 30px 0.5%;
+}
+input {
+  width: 100%;
+  height: 45px;
+  padding-left: 10px;
+  border: 2px solid #67bb79;
+  border-radius: 20px;
+  outline: none;
+  background: #fafafb;
+  color: #9E9C9C;
+}
+button {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 60px;
+    height: 45px;
+    border: none;
+    background: #67bb79;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:before {
+  content: "\f002";
+   font-family: 'Sono', serif;
+  font-size: 20px;
+  color: #F9F0DA;
+}
+
+#view{
+    float: left;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: #fafafa;
+    /*background-attachment: fixed;*/
+
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+    color: #333333;
+}
+
+#view h2{ font-size: 4em}
+#view h4{ color: #555555; font-size: 1.5em}
+#view .img{
+    float: left;
+    width: 25%;
+    padding: 10px;
+    margin: 15px 7% 2% 17px;
+}
+
+#view img{
+    margin-left: 20%;
+    padding: 5px;
+    width: 100%;
+    border: 2px solid silver;
+    border-radius: 50px;
+}
+
+#view span{
+    float:left;
+    width:100%;
+    font-size: 2em;
+    margin-top: 10px;
+    font-family: 'Sono', serif;
+}
+
+#animals{
+    float: left;
+    background-color: #f3f3f3;
+    background-attachment: fixed;
+    padding-top: 30px;
+    width: 100%;
+    margin-left: 4%;
+    margin-right: 5%;
+    margin-bottom: 20%;
+}
+
+#animals h4{ font-family: "Lucida Sans", serif; font-size: 30px; color: #253127
+}
+
+.push {
+      width: 90%;
+    display: block;
+    padding: 10px;
+    columns: 3;
+    list-style: none;
+    font-family: "Lucida Sans", serif;
+}
+.push:after{
+    display: block;
+    float:none;
+    content: ' ';
+    clear:both;
+}
+
+.push li {
+      position: relative;
+      padding: 20px 0px 20px 40px;
+      color: #D29D25;
+      font-variant: small-caps;
+      font-weight: bold;
+      cursor: pointer;
+    font-size: 25px;
+}
+.push li >a{
+
+      color: #D29D25;
+      font-variant: small-caps;
+      font-weight: bold;
+      cursor: pointer;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.push li:before {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4F5151;
+  content: "";
+  left: 0;
+  transition: .3s ease-in-out;
+  top: 27px;
+}
+.push li:after {
+  position: absolute;
+  border-left: 1px dotted #4F5151;
+  width: 1px;
+  bottom: -12px;
+  content: "";
+  left: 3px;
+  top: 48px;
+}
+.push li:hover:before{box-shadow: 0 0 0 10px rgba(0,0,0,.2)}
+.push li:last-child:after {content: none;}
+.push li >p{
+/*position: absolute;*/
+    width: 240px;
+    top: 37px;
+    left:0px;
+    display: none;
+    background-color: #333333;
+}
+.push li >p:hover{
+    background-color: #333333;
+}
+.push li >a:hover > .push p{
+    display: block;
+}
+
+.cont_class{
+    font-size: 20px;
+    color: #253127;
+    font-family: 'Sono', serif;
+    font-weight: lighter;
+}
+
+/* Стили для футера */
+#footer {
+    background-color: #F4F4F4;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    width: 100%;
+    padding: 25px 0.5% 0.5%;
+}

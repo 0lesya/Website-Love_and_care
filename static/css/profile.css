@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+header{
+    width: 100%;
+    padding: 25px 0.5% 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo{
+    color: #fff;
+    cursor: pointer;
+}
+
+header #logo span{
+    font-size: 2em;
+    margin-left: 40px;
+    line-height: 45px;
+    font-family: 'Sono', serif;
+
+}
+
+@media (min-width: 701px){
+    #logo
+    {
+        float: left;
+        width: 30%;
+        font-size: 1.5em;
+    }
+
+    #about{
+     float: right;
+     width: 67%;
+    }
+}
+
+@media (max-width: 700px){
+    #logo
+    {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    #about{
+        float:right;
+        width: 100%
+    }
+}
+
+#about{
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-family: 'Sono', serif;
+}
+
+#about > a{color: #fff}
+#about >a:hover{color:#b0b0b0;
+text-decoration: underline;
+}
+#about >a:not(:last-child){
+    margin-right: 7%;
+}
+
+.fixed{
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo{
+    color: #343434;
+}
+
+.fixed #about a {color: #343434}
+.fixed #about a:hover {color: #7c7c7c}
+
+@media (min-width: 1001px)
+{
+    #top{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 651px){
+    #top{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 650px)
+{
+    #top{
+        font-size: 1.5em;
+        padding-top: 50%;
+    }
+}
+#top {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://zastavok.net/main/vesna/156676664232.jpg);
+    background-blend-mode: multiply;
+    background-color: #555555;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+
+#top h1{
+    padding-top: 20%;
+}
+
+#top h3{
+    color: #ccc;
+}
+
+.message,
+.form,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  width: 700px;
+  height: 400px;
+  opacity: 1;
+  position: absolute;
+  display: grid;
+    margin-top: 15%;
+    margin-left: 30%;
+    grid-template: 100% / 50% 50%;
+  box-shadow: 4px 4px 10px 0 #fcfcfc;
+}
+.message {
+    position: absolute;
+    background: #e5e1e1;
+    width: 50%;
+    height: 100%;
+    transition: 0.5s all ease;
+    transform: translateX(100%);
+    z-index: 4;
+}
+.message:before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 70%;
+    background: #e5e1e1;
+    opacity: 0;
+    left: 0;
+    top: 15%;
+  }
+
+
+.message .button {
+    margin: 5px 0;
+  }
+
+
+.signup:before {
+    opacity: 0.3;
+    left: 0;
+  }
+
+
+.login:before {
+    opacity: 0.3;
+    left: 100%;
+  }
+
+
+.btn-wrapper {
+  width: 60%;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+}
+.form--heading {
+    font-size: 25px;
+    height: 50px;
+    color: #e5e1e1;
+    font-family: 'Sono', sans-serif;
+}
+
+.form--signup {
+    border-right: 1px solid #999;
+  }
+
+form {
+  width: 70%;
+
+  }
+
+input {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #e5e1e1;
+    font-size: 17px;
+    font-weight: 300;
+    color: #797a9e;
+    margin-top: 5%;
+    letter-spacing: 0.11em;
+    background: #e5e1e1;
+}
+
+input::placeholder {
+      color: #333;
+      font-size: 15px;
+    }
+
+input:focus {
+      outline: 0;
+      border-bottom: 1px solid #809bce;
+      transition: 0.6s all ease;
+    }
+
+.button {
+    margin-top: 10%;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #bd9345;
+  border-radius: 8px;
+    font-size: 17px;
+    font-family: 'Sono', sans-serif;
+  color: #bd9345;
+  transition: .2s ease-in-out;
+    background: #e5e1e1;
+}
+.button:before {
+  content: "";
+  background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.button:hover {
+  background: #bd9345;
+  color: #fff;
+}
+.button:hover:before {
+  left: 150px;
+  transition: .5s ease-in-out;
+}
+
+input:valid {
+  border: 1px solid green;
+    color:green;
+}
+
+input:invalid {
+  border: 1px solid red;
+    color: red;
+}
+
+.form-inner input[type="submit"] {
+   margin-top: 30px;
+   background: #67bb79;
+   border-bottom: 4px solid #42804f;
+   color: white;
+   font-size: 14px;
+}
+
+

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+header{
+    width: 100%;
+    padding: 25px 0.5% 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo{
+    color: #fff;
+    cursor: pointer;
+}
+
+header #logo span{
+    font-size: 2em;
+    margin-left: 40px;
+    line-height: 45px;
+    font-family: 'Sono', serif;
+
+}
+
+@media (min-width: 701px){
+    #logo
+    {
+        float: left;
+        width: 30%;
+        font-size: 1.5em;
+    }
+
+    #about{
+     float: right;
+     width: 67%;
+    }
+}
+
+@media (max-width: 700px){
+    #logo
+    {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    #about{
+        float:right;
+        width: 100%
+    }
+}
+
+#about{
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-family: 'Sono', serif;
+}
+
+#about > a{color: #fff}
+#about >a:hover{color:#b0b0b0;
+text-decoration: underline;
+}
+#about >a:not(:last-child){
+    margin-right: 7%;
+}
+
+.fixed{
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo{
+    color: #343434;
+}
+
+.fixed #about a {color: #343434}
+.fixed #about a:hover {color: #7c7c7c}
+
+@media (min-width: 1001px)
+{
+    #top{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 651px){
+    #top{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 650px)
+{
+    #top{
+        font-size: 1.5em;
+        padding-top: 50%;
+    }
+}
+#top {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://zastavok.net/main/animals/1528281535.jpg);
+    background-blend-mode: multiply;
+    background-color: #555555;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+
+#top h1{
+    padding-top: 20%;
+}
+
+#top h3{
+    color: #ccc;
+}
+
+#main{
+    padding: 100px 20%;
+    width: 60%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid silver;
+    color: #484848;
+}
+
+@media(min-width: 1401px){
+    #main{
+        padding: 100px 20%;
+        width: 60%;
+    }
+}
+@media(max-width: 1400px){
+    #main{
+        padding: 100px 10%;
+        width: 80%;
+    }
+}
+
+@media(max-width: 700px){
+    #main div{
+        width: 98% !important;
+    }
+
+}
+
+#main div{
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+}
+
+#main h2{font-size: 3em}
+#main span{color: #a0a0a0; font-size: 1.6em; line-height: 1.6}
+
+
+#overview{
+    float: left;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: #f6f6f6;
+    background-attachment: fixed;
+
+    padding: 100px;
+    width: 100%;
+    text-align: center;
+    color: #333333;
+}
+
+#overview h2{ font-size: 4em}
+#overview h4{ color: #555555; font-size: 1.5em}
+#overview .img{
+    float: left;
+    width: 30%;
+    margin-right: 3%;
+    margin-top: 50px;
+}
+
+#overview img{
+    float:left;
+    padding: 5px;
+    width:60%;
+    border: 2px solid #f6f6f6;
+}
+
+#overview span{
+    float:left;
+    width:60%;
+    font-size: 2em;
+    margin-top: 10px;
+   font-family: 'Sono', serif;
+}
+#overview span > a{color: #4a4a4a; line-height: 1.5}
+#overview span >a:hover{color:#00001f;
+text-decoration: underline;
+}
+#overview span >a:not(:last-child){
+    margin-right: 7%;
+}
+
+#contacts {
+    width: 100%;
+    float: left;
+    padding-bottom: 40px;
+    padding-top: 70px;
+    border-top: 4px solid #ccc;
+    background: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Sono', serif;
+    font-weight: lighter;
+}
+
+#contacts h5{font-size: 3em; color: #4f4f4f}
+
+.decor {
+   position: relative;
+   max-width: 400px;
+   margin: 50px auto 0;
+   background: white;
+   border-radius: 30px;
+}
+.form-left-decoration, .form-right-decoration {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 20px;
+   background: #42804f;
+   border-radius: 20px;
+}
+.form-left-decoration {
+   bottom: 60px;
+   left: -30px;
+}
+.form-right-decoration {
+   top: 60px;
+   right: -30px;
+}
+.form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 20px;
+   border-radius: 30px;
+   background: white;
+}
+.form-left-decoration:before {
+   top: -20px;
+}
+.form-left-decoration:after {
+   top: 20px;
+   left: 10px;
+}
+.form-right-decoration:before {
+   top: -20px;
+   right: 0;
+}
+.form-right-decoration:after {
+   top: 20px;
+   right: 10px;
+}
+.circle {
+   position: absolute;
+   bottom: 80px;
+   left: -55px;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background: white;
+}
+.form-inner {
+   padding: 50px;
+}
+input{
+   display: block;
+   width: 100%;
+   padding: 0 20px;
+   margin-bottom: 10px;
+   background: #E9EFF6;
+   line-height: 40px;
+   border-width: 0;
+   border-radius: 20px;
+   font-family: 'Roboto', sans-serif;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+.form-inner input[type="submit"] {
+   margin-top: 30px;
+   background: #67bb79;
+   border-bottom: 4px solid #42804f;
+   color: white;
+   font-size: 14px;
+}
+
+.form-inner textarea {
+   resize: none;
+}
+.form-inner h3 {
+   margin-top: 0;
+   font-family: 'Sono', serif;
+  font-weight: 500;
+   font-size: 24px;
+   color: #707981;
+}
+    /* Стили для футера */
+#footer {
+    background-color: #F4F4F4;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    width: 100%;
+    padding: 25px 0.5% 0.5%;
+    }
