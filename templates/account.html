@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Моя страница</title>
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+</head>
+<body>
+<header>
+    <div id="logo" onclick="slowScroll('#top')">
+        <span>Love and Care</span>
+    </div>
+    <div id="about">
+        <a href="/">Главная страница</a>
+        <a href="/#comment">Обратная связь</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout'  %}">Logout</a>
+        {%  else %}
+        <a href="{% url 'login' %}"></a>
+        {% endif %}
+    </div>
+</header>
+<div class="card">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% if user.profile.profile_pic %}
+    <img src="{{ profile.profile_pic.url }}" alt="Profile Picture"><br><br>
+    {% else %}
+    <img src="{% static 'css/img/profile/user1.png' %}" alt="Default Profile Picture"><br><br>
+    {% endif %}
+    <p><strong>Имя:</strong> {{ user.username }}</p><br><br>
+    <p><strong>Дополнительная информация:</strong> {{ profile.bio }}</p><br><br>
+    <button class="button" onclick="moveDiv1()">Редактировать профиль</button>
+</div>
+<div id="content" class="cont_class" style="display:none">
+        {% if request.user.is_authenticated %}
+    <div class="card-body">
+    <form  method="post" autocomplete="off" name='update_account' action="{% url 'update_account' %}">
+      {% csrf_token %}
+        <input type="text" name="nickname" placeholder="Никнейм">
+      <button name = 'send' class="button">Редактировать</button>
+    </form>
+      {% if form.errors %}
+      <p>{{ form.errors.error }}</p>
+      {% endif %}
+    </div>
+{% else %}
+    <a href="{% url 'login' %}">Авторизация</a>
+{% endif %}
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+function moveDiv1() {
+     let content = document.getElementById("content");
+     let container = document.getElementById("infoContainer");
+     if (content.style.display === "none") {
+      content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+     container.appendChild(content);
+     container.style.width= "100%";
+     container.style.float = "left";
+    container.style.color ="#484848";
+ }
+ </script>
+</html>
