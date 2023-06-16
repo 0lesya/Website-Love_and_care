@@ -212,16 +212,44 @@ h1, h2, h3, h4, h5{
     font-weight: lighter;
 }
 .answers{
-    padding-left: 5%;
-    width: 95%;
+    padding: 2% 6% 2% 6%;
+    width: 90%;
     float: left;
     background-color: #f6f6f6;
     border-top: 2px solid silver;
     color: #484848;
     font-family: 'Sono', serif;
     font-weight: lighter;
+
 }
-    /* Стили для футера */
+.answers h2{
+    padding-bottom: 1%;
+    font-size: 25px;
+    color: #035017
+}
+
+.answers p{
+    padding-bottom: 0.3%;
+    font-size: 18px;
+}
+
+.answers li{
+    padding-bottom: 0.3%;
+    font-size: 18px;
+}
+
+.answers a{
+color: #565756;
+text-decoration: none;
+display: block;
+height: 44px;
+line-height: 44px;
+font-size: 20px;
+position: relative;
+transition: 0.3s linear;
+}
+.answers a:hover {background: #e3eae2;}
+
 #footer {
     background-color: #F4F4F4;
     text-align: center;
